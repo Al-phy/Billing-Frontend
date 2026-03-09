@@ -37,7 +37,7 @@ export const BillingProvider = ({ children }) => {
         const id = setTimeout(() => controller.abort(), 10000); // 10s timeout
 
         try {
-            const response = await fetch(`${API_URL}${endpoint}`, {
+            const response = awaitfetch(`${API_URL}/api${endpoint}`,{
                 ...options,
                 headers,
                 signal: controller.signal
